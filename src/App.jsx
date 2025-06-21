@@ -1,12 +1,11 @@
-import Hero from "./Hero"
+import HeroPage from "./HeroPage"
 
-const App = ()=> {
-
+const App = () => {
   return (
     <>
-    <Hero/>
+      <HeroPage />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
