@@ -14,21 +14,21 @@ const HeroPage = () => {
       method: "POST",
       url: "https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com/aaaaaaaaaaaaaaaaaiimagegenerator/quick.php",
       headers: {
-        "x-rapidapi-key": API_KEY,
+        "x-rapidapi-key": 'bc38acbb07mshb05aaa75ee423c8p1946cbjsnb0d83a8fd8b7',
         "x-rapidapi-host":
           "ai-text-to-image-generator-flux-free-api.p.rapidapi.com",
         "Content-Type": "application/json",
       },
       data: {
         prompt: textPrompt,
-        style_id: 49,
-        size: "16-9",
+        style_id: 17,
+        size: "1-1",
       },
     };
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
+      console.log(response.data.final_result);
       setImagePrompt(response.data.final_result[0].origin);
     } catch (error) {
       console.error(error);
